@@ -137,3 +137,10 @@
     cursor: pointer;
     /* Ko'rsatgichni qo'yish */
 }
+
+@media (max-width: 500px) {
+    .catalog-item {
+        width: 100%;
+    }
+
+}
