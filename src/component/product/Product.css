@@ -1,0 +1,139 @@
+.product-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: rgb(83, 56, 29);
+    ;
+    /* Markazda joylashtirish */
+}
+
+.header {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.product-catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* Kartochka kengligi */
+    gap: 20px;
+    /* Mahsulotlar orasidagi bo'shliq */
+}
+
+.catalog-item {
+    background: #fff;
+    /* Oq fon */
+    border-radius: 10px;
+    height: 390px;
+    /* Qirralar yumshoq bo'lishi uchun */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    /* Ikonalar uchun pozitsiya */
+}
+
+.catalog-item:hover {
+    transform: translateY(-5px);
+    /* Hover qilganda yuqoriga siljishi */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Katta soyalar */
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    /* Avtomatik balandlik */
+    object-fit: contain;
+    /* Rasm o'lchamini to'g'ri ko'rsatish */
+    border-bottom: 2px solid #f0f0f0;
+    /* Rasm ostida chiziq */
+}
+
+.product-title {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    padding: 0 10px;
+    /* Matn atrofidagi bo'shliq */
+}
+
+.product-cost {
+    font-size: 1rem;
+    color: rgba(83, 56, 29, 0.663);
+    /* Narx rangi */
+    padding: 0 10px;
+    /* Matn atrofidagi bo'shliq */
+}
+
+.product-rating-wrapper {
+    display: flex;
+    justify-content: space-between;
+    /* Yulduz va sharhlarni ikki tomonga joylash */
+    padding: 0 10px;
+    margin-bottom: 10px;
+    /* Rating va tugma orasidagi bo'shliq */
+}
+
+.purchase-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(83, 56, 29);
+    ;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    /* Tugma o'lchami */
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    width: calc(100% - 20px);
+    /* Tugma kengligini to'liq qilish */
+    margin: 0 10px;
+    /* Tugma atrofidagi bo'shliq */
+    position: absolute;
+    bottom: 10px;
+}
+
+.purchase-btn:hover {
+    background-color: rgb(68, 46, 23);
+    ;
+    /* Hover paytida rang o'zgarishi */
+}
+
+.purchase-btn .shop {
+    font-size: 20px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-between;
+    /* Ikonkalarni ikki tomonga joylash */
+    margin: 10px;
+    /* Ikonkalar orasidagi bo'shliq */
+    position: absolute;
+    top: 5px;
+    right: 0px;
+}
+
+.wishlist-icon {
+    color: rgb(83, 56, 29);
+    ;
+    /* Qizil rang */
+    font-size: 25px;
+    /* Ikonka o'lchami */
+    cursor: pointer;
+    /* Ko'rsatgichni qo'yish */
+}
+
+.cart-icon {
+    color: rgb(83, 56, 29);
+    ;
+    /* Savatcha ikonkasi rangi */
+    margin-left: 5px;
+    font-size: 25px;
+    /* Ikonka o'lchami */
+    cursor: pointer;
+    /* Ko'rsatgichni qo'yish */
+}
