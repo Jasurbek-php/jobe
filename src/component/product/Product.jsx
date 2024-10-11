@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./Product.css"; // yuklangan CSS fayl
-import { CiHeart } from "react-icons/ci"; // yurak ikonkasi
-import { MdOutlineShoppingCart } from "react-icons/md"; // Savatcha ikonkasi uchun
-import { AiFillShopping } from "react-icons/ai";// shop iconkasi uchun
+import "./Product.css";
+import { CiHeart } from "react-icons/ci";
+import { MdOutlineShoppingCart } from "react-icons/md";
+import { AiFillShopping } from "react-icons/ai";
 import One from '../../assets/Screenshot 2024-10-09 175506.png';
 import Two from '../../assets/Screenshot 2024-10-09 175458.png';
 import Three from '../../assets/Screenshot 2024-10-09 175450.png';
@@ -39,39 +39,29 @@ const products = [
         rating: 4.7,
         reviews: 293,
         image: Three,
-
-    },
-    {
-        id: 5,
-        name: "Saramonic Blink 500 B2 + simsiz mikrofon, universal",
-        price: "1 999 000 so`m",
-        rating: 4.7,
-        reviews: 293,
-        image: Three,
-
     }
 ];
 
 function Product() {
-    const [wishlist, setWishlist] = useState([]); // Sevimlilar ro'yxati
-    const [cart, setCart] = useState([]); // Savatcha
-    const [ratings, setRatings] = useState(products.map(product => product.rating)); // Mahsulotlar baholari
+    const [wishlist, setWishlist] = useState([]);
+    const [cart, setCart] = useState([]);
+    const [ratings, setRatings] = useState(products.map(product => product.rating));
 
     // Mahsulotni sevimlilarga qo'shish
     const toggleWishlist = (id) => {
         if (wishlist.includes(id)) {
-            setWishlist(wishlist.filter(item => item !== id)); // O'chirish
+            setWishlist(wishlist.filter(item => item !== id));
         } else {
-            setWishlist([...wishlist, id]); // Qo'shish
+            setWishlist([...wishlist, id]);
         }
     };
 
     // Mahsulotni savatchaga qo'shish
     const toggleCart = (id) => {
         if (cart.includes(id)) {
-            setCart(cart.filter(item => item !== id)); // O'chirish
+            setCart(cart.filter(item => item !== id));
         } else {
-            setCart([...cart, id]); // Qo'shish
+            setCart([...cart, id]);
         }
     };
 
@@ -95,13 +85,12 @@ function Product() {
                                     <span
                                         key={star}
                                         onClick={() => updateRating(product.id, star)}
-                                        style={{ cursor: 'pointer', color: star <= ratings[product.id - 1] ? 'gold' : 'gray' }} // Bahoni yangilash
+                                        style={{ cursor: 'pointer', color: star <= ratings[product.id - 1] ? 'gold' : 'gray' }}
                                     >
                                         ⭐
                                     </span>
-
                                 ))}
-                                {ratings[product.id - 1]}        {/* Bahoni ko'rsatish */}
+                                {ratings[product.id - 1]} {/* Bahoni ko'rsatish */}
                             </div>
 
                             <span>({product.reviews})</span>
@@ -126,7 +115,6 @@ function Product() {
                                 <MdOutlineShoppingCart />
                             </span>
                         </div>
-
                     </div>
                 ))}
             </div>
